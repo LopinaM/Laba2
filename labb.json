@@ -1,0 +1,236 @@
+[
+  {
+    "rule_name" : "ask_Klei-PVA",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                    { "func": "eq", "arg": [ "Klei-PVA", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Klei-PVA",
+                                    { "func": "yes_or_no", "arg": "Есть ли Klei-PVA?: "} ]
+             }
+  },
+ {
+    "rule_name" : "ask_Kraski",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Klei-PVA", "yes" ] } ,
+                                    { "func": "eq", "arg": [ "Kraski", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Kraski",
+                                    { "func": "yes_or_no", "arg": "Есть ли краски?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Plush",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                    { "func": "eq", "arg": [ "Plush", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Plush",
+                                    { "func": "yes_or_no", "arg": "Есть ли плюш?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Derevo",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Plush", "yes" ] },
+                                    { "func": "eq", "arg": [ "Derevo", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Derevo",
+                                    { "func": "yes_or_no", "arg": "Есть ли дерево?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Sherst",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Plush", "yes" ] },
+                                  { "func": "eq", "arg": [ "Derevo", "yes" ] },
+                                    { "func": "eq", "arg": [ "Sherst", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Sherst",
+                                    { "func": "yes_or_no", "arg": "Есть ли шерсть?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Tkani",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                    { "func": "eq", "arg": [ "Tkani", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Tkani",
+                                    { "func": "yes_or_no", "arg": "Есть ли ткани?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Nognitci",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Tkani", "yes" ] },
+                                    { "func": "eq", "arg": [ "Nognitci", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Nognitci",
+                                    { "func": "yes_or_no", "arg": "Есть ли ножницы?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Karandash",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Tkani", "yes" ] },
+                                  { "func": "eq", "arg": [ "Nognitci", "yes" ] },
+                                    { "func": "eq", "arg": [ "Karandash", 0 ] }]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Karandash",
+                                    { "func": "yes_or_no", "arg": "Есть ли карандаш?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Prisytstvuet-karton",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                    { "func": "eq", "arg": [ "Prisytstvuet-karton", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Prisytstvuet-karton",
+                                    { "func": "yes_or_no", "arg": "Присутствует картон?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Prisytstvuet-plastic",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Prisytstvuet-karton", "yes" ] },
+                                    { "func": "eq", "arg": [ "Prisytstvuet-plastic", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Prisytstvuet-plastic",
+                                    { "func": "yes_or_no", "arg": "Присутствует пластик?: "} ]
+             }
+  },
+  
+  {
+    "rule_name" : "ask_Iskustvenui-mex",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                    { "func": "eq", "arg": [ "Iskustvenui-mex", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Iskustvenui-mex",
+                                    { "func": "yes_or_no", "arg": "Присутствует искусственный мех?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Prisytstvuet-nitok",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Iskustvenui-mex", "yes" ] },
+                                    { "func": "eq", "arg": [ "Prisytstvuet-nitok", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Prisytstvuet-nitok",
+                                    { "func": "yes_or_no", "arg": "Присутствие ниток?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Spicu",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                    { "func": "eq", "arg": [ "Spicu", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Spicu",
+                                    { "func": "yes_or_no", "arg": "Есть ли спицы?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_kruchok",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Spicu", "yes"] },
+                                    { "func": "eq", "arg": [ "kruchok", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "kruchok",
+                                    { "func": "yes_or_no", "arg": "Есть ли крючок?: "} ]
+             }
+  },
+  {
+    "rule_name" : "ask_Prisytstvuet-igl",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                    { "func": "eq", "arg": [ "Spicu", "yes"] },
+                                    { "func": "eq", "arg": [ "kruchok", "yes" ] },
+                                    { "func": "eq", "arg": [ "Prisytstvuet-igl", 0 ] } ]
+            },
+    "actions": { "func": "set", "arg":
+                                  [ "Prisytstvuet-igl",
+                                    { "func": "yes_or_no", "arg": "Присутствие игл?: "} ]
+             }
+  },
+  {
+    "rule_name" : "answer_0",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                    { "func": "eq", "arg": [ "Klei-PVA", "yes" ] },
+                                    { "func": "eq", "arg": [ "Kraski", "yes" ] },
+                                    { "func": "eq", "arg": [ "Plush", "no" ]},
+                                    { "func": "eq", "arg": [ "Tkani", "no" ]}]
+            },
+    "actions": { "func": "and", "arg":
+                                  [ { "func": "set", "arg": [ "Solution", 1] },
+                                    { "func": "print", "arg": "Результат - авторская игрушка" } ]
+             }
+  },
+  {
+    "rule_name" : "answer_1",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Klei-PVA", "no" ]},
+                                  { "func": "eq", "arg": [ "Sherst", "no" ]},
+                                  { "func": "eq", "arg": [ "Prisytstvuet-karton", "no" ] },
+                                  { "func": "eq", "arg": [ "Karandash", "yes" ]}]
+            },
+    "actions": { "func": "and", "arg":
+                                  [ { "func": "set", "arg": [ "Solution", 1] },
+                                    { "func": "print", "arg": "Результат - авторская игрушка" } ]
+             }
+  },
+  {
+    "rule_name" : "answer_2",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                  { "func": "eq", "arg": [ "Klei-PVA", "no" ]},
+                                  { "func": "eq", "arg": [ "Prisytstvuet-plastic", "no" ]},
+                                  { "func": "eq", "arg": [ "Sherst", "no" ]},
+                                  { "func": "eq", "arg": [ "Karandash", "yes" ]}]
+            },
+    "actions": { "func": "and", "arg":
+                                  [ { "func": "set", "arg": [ "Solution", 1] },
+                                    { "func": "print", "arg": "Художественная и интерьерная игрушка" } ]
+             }
+  },
+  {
+    "rule_name" : "answer_3",
+    "conditions": { "func": "and", "arg":
+                                  [ { "func": "eq", "arg": [ "Solution", 0 ] },
+                                    { "func": "eq", "arg": [ "Prisytstvuet-plastic", "no" ]},
+                                    { "func": "eq", "arg": [ "Prisytstvuet-nitok", "yes" ] },
+                                    { "func": "eq", "arg": [ "Prisytstvuet-igl", "no" ] }]
+            },
+    "actions": { "func": "and", "arg":
+                                  [ { "func": "set", "arg": [ "Solution", 1] },
+                                    { "func": "print", "arg": "Результат - игровая игрушка" } ]
+             }
+  }
+
+]
